@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div>{{username}}</div>
+        <div>{{age}}</div>
+        <div v-text="sex"></div>
+        <button @click="handle">点击</button>
+    </div>
+</body>
+</html>
+<script src="index.js"></script>
+<script src="./compile.js"></script>
+<script>
+    var vm = new AlleyVue({
+        el:"#app",
+        data:{
+            username:"Alley",
+            age:18,
+            sex:"男",
+           
+        },
+        methods: {
+            handle(){
+              this.username = "吴彦祖"
+            }
+        },
+    })
+
+    console.log(vm);
+
+
+
+
+    /*
+        什么是虚拟DOM？
+            虚拟DOM就是真实的JS对象，我们操作内存中的JS对象的速度永远要比直接操作DOM的速度要快
+
+        为什么不操作真实的DOM对象？
+            1、回流重绘
+        
+
+
+        1、浅谈虚拟DOM
+            a、浏览器渲染HTML页面的流程
+
+            b、回流和重绘
+
+            c、什么是虚拟DOM
+
+            d、key值得作用
+
+            e、diff算法
+    
+    
+    */
+</script>
